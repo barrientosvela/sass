@@ -1,0 +1,108 @@
+// importamos un tipo de fuente 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+// desde un archivo local
+@font-face {
+    font-family: 'Aaaiight';
+    src: url('../font/aaaiight-fat.ttf');
+}
+
+// Definimos variables
+$color-texto: #3a3a3a;
+$tamanio-div: 300px;
+$letraBasic: 'Raleway';
+$letraGraf: 'Aaaiight';
+$sombra: 1px, 10px;
+
+// Creamos los mixin
+@mixin font-base {
+    font-family: $letraBasic;
+    font-size: 18px;
+    color: $color-texto;
+}
+
+@mixin subtitulo {
+    font-family: $letraGraf;
+    font-size: 20px;
+    color: black;
+}
+
+@mixin div-basico($num, $color) {
+    width: $tamanio-div*$num;
+    height: $tamanio-div*$num;
+    background-color: $color;
+}
+
+@mixin columnas($ancho) {
+    float: left;
+    width: $ancho;
+}
+
+// Creamos una serie de clases con diferentes colores
+$colors: red, blue, green, yellow;
+
+@each $color in $colors {
+    .text-#{$color} {
+        color: $color;
+    }
+}
+
+// Crea una serie de clases con diferentes margenes
+$margin: 10px;
+$i: 1;
+
+@while $i < 10 {
+    .m-#{$i} {
+        margin: $margin * $i;
+    }
+
+    $i: $i + 1;
+}
+
+// Aplicamos los mixin, funciones y variables a los elementos HTML relevantes
+body {
+    @include font-base;
+    height: 100vh;
+}
+
+// Podemos crear clases reutilizable
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: lighten(blue, 10%);
+    }
+}
+
+.sep {
+    padding: 10px;
+    width: 100%;
+    float: left;
+}
+
+.contenedorBasico {
+    @include div-basico(1, red);
+}
+
+.footer {
+    padding-top: 200px;
+}
+
+.subtitulo {
+    @include subtitulo;
+}
+
+.col-1 {
+    @include columnas(8.33%);
+}
+
+.col-2 {
+    @include columnas(16.66%);
+}
+
+.col-3 {
+    @include columnas(25%);
+}

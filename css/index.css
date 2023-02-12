@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@font-face {
+  font-family: 'Aaaiight';
+  src: url("../font/aaaiight-fat.ttf"); }
+.text-red {
+  color: red; }
+
+.text-blue {
+  color: blue; }
+
+.text-green {
+  color: green; }
+
+.text-yellow {
+  color: yellow; }
+
+.m-1 {
+  margin: 10px; }
+
+.m-2 {
+  margin: 20px; }
+
+.m-3 {
+  margin: 30px; }
+
+.m-4 {
+  margin: 40px; }
+
+.m-5 {
+  margin: 50px; }
+
+.m-6 {
+  margin: 60px; }
+
+.m-7 {
+  margin: 70px; }
+
+.m-8 {
+  margin: 80px; }
+
+.m-9 {
+  margin: 90px; }
+
+body {
+  font-family: "Raleway";
+  font-size: 18px;
+  color: #3a3a3a;
+  height: 100vh; }
+
+.btn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px; }
+  .btn:hover {
+    background-color: #3333ff; }
+
+.sep {
+  padding: 10px;
+  width: 100%;
+  float: left; }
+
+.contenedorBasico {
+  width: 300px;
+  height: 300px;
+  background-color: red; }
+
+.footer {
+  padding-top: 200px; }
+
+.subtitulo {
+  font-family: "Aaaiight";
+  font-size: 20px;
+  color: black; }
+
+.col-1 {
+  float: left;
+  width: 8.33%; }
+
+.col-2 {
+  float: left;
+  width: 16.66%; }
+
+.col-3 {
+  float: left;
+  width: 25%; }
+
+/*# sourceMappingURL=index.css.map */
